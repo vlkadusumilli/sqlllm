@@ -1,0 +1,36 @@
+{
+  "name": "hello-world-extension",
+  "displayName": "Hello World Extension",
+  "description": "Sample Hello World VS Code extension",
+  "version": "0.0.1",
+  "publisher": "sample",
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:helloWorldExtension.helloWorld"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "helloWorldExtension.helloWorld",
+        "title": "Hello World"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "echo \"No tests\""
+  },
+  "devDependencies": {
+    "@types/node": "^18",
+    "@types/vscode": "^1.54.0",
+    "typescript": "^4.0.0"
+  }
+}
