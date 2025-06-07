@@ -1,0 +1,42 @@
+{
+  "name": "oracle-bip-extension",
+  "displayName": "Oracle BIP SQL Runner",
+  "description": "Run SQL against Oracle ERP Cloud BIP reports",
+  "version": "0.0.1",
+  "publisher": "sample",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:oracleBip.manageConnections",
+    "onCommand:oracleBip.runQuery"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "oracleBip.manageConnections",
+        "title": "Manage BIP Connections"
+      },
+      {
+        "command": "oracleBip.runQuery",
+        "title": "Run SQL on BIP"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "echo \"No tests\""
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "@types/vscode": "^1.100.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
